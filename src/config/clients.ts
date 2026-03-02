@@ -5,4 +5,5 @@ export const clients = {
   health: new HttpClient(env.baseUrlHealth),
   playground: new HttpClient(env.baseUrlPlayground),
   login: new HttpClient(env.baseUrlLogin),
+  fakestore: new HttpClient(env.baseUrlFakeStore),
 };

@@ -17,4 +17,9 @@ export class PlaygroundUserService {
   getUser(id: string, opts?: HttpRequestOptions) {
     return this.http.get(`/users/${id}`, opts);
   }
+
+  updateUser(id: string | number, body: unknown) {
+    // Inyectamos cabeceras para saltar el bloqueo de seguridad (Cloudflare) de FakeStoreAPI
+    return this.http.put(`/users/${id}`, body,);
+  }
 }

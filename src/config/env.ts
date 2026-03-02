@@ -11,4 +11,5 @@ export const env = {
   baseUrlPlayground: required("PLAYGROUND_BASE_URL"),
   playgroundApiKey: required("PLAYGROUND_API_KEY"),
   baseUrlLogin: required("LOGIN_BASE_URL"),
+  baseUrlFakeStore: required("FAKESTORE_BASE_URL"),
 };

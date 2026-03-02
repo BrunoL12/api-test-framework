@@ -4,4 +4,5 @@ export const DOMAINS = [
   "parking",
   "mallSession",
   "vehicles",
+  "fakestore_users",
 ];

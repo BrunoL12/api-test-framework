@@ -76,4 +76,26 @@ describe("Playground Users API", () => {
       assertErrorContract(res.data);
     },
   );
+
+  const updatePayload = {
+    email: "John@gmail.com",
+    username: "johnd",
+    password: "mypassword",
+  };
+
+  qaTest(
+    "Validar update exitoso de usuario",
+    {
+      tags: ["@TC-FAKE-01", "happy-path"],
+      risk: "HIGH",
+      endpointKey: "PUT /users/:id",
+      domain: "fakestore_users",
+    },
+    async () => {
+      const res = await usersService.updateUser("7",updatePayload);
+      
+      expect(res.status).toBe(200);
+
+    }
+  );
 });
